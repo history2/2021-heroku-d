@@ -1,0 +1,8 @@
+{
+  "name": "heroku-demo",
+  "description": "using Docker",
+  "repository": "https://github.com/history2/heroku-demo",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg",
+  "keywords": ["hero", "docker", "proxy"],
+  "stack": "container"
+}
