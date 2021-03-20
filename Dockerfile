@@ -8,7 +8,7 @@ COPY script /tmp
 RUN /bin/bash -c 'chmod 755 /tmp/bin && mv /tmp/bin/* /bin/ && rm -rf /tmp/* '	
 RUN apt update -y \
 	&& apt upgrade -y \
- 	&& apt install -y nginx supervisor vim screen wget curl \
+ 	&& apt install -y nginx supervisor vim screen wget curl ffmpeg \
 	&& mkdir -p /run/screen \
 	&& chmod -R 777 /run/screen \
 	&& chmod +x /configure.sh \
@@ -16,6 +16,7 @@ RUN apt update -y \
 	&& chmod +x /bin/rclone \
 	&& chmod +x /bin/frpc \
 	&& chmod +x /bin/ttyd \
+	&& chmod +x /bin/upx \
 	&& rm -rf /etc/nginx/nginx.conf \
 	&& mkdir -p /var/www/html/ttyd
 COPY static-html /var/www/html	
